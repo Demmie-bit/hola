@@ -7,6 +7,8 @@ function setup(){
 
     poseNet = ml5.poseNet(video, modelLoaded);
     poseNet.on('pose', gotPoses)
+
+    
 }
 function modelLoaded(){
     console.log('PoseNet is Initialized')
@@ -42,8 +44,8 @@ function gotPoses(results){
 function draw() {
     background('#D9F1F1');
 
-    document.getElementById("square_side").innerHTML = "width and hieght of a square will be = " + difference + "px";
-    fill('#B6E3E9');
-    stroke('#B6E3E9');
-    square(noseX, noseY, difference);
+    textSize(width / 7);
+    fill('#FFFFFF') 
+    document.getElementById("text_side").innerHTML = "width and hieght of text will be = " + difference + "px";
+    text("A N W E S H A  :)",noseX, noseY);
    }
